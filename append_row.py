@@ -9,6 +9,9 @@ scopes = ['https://www.googleapis.com/auth/spreadsheets',
 credentials = Credentials.from_service_account_file('creds.json', scopes=scopes)
 
 def append_row(period,lname,fname,empId,hours):
+    """ 
+     Appends a row to a google sheet
+    """
     gc = gspread.authorize(credentials)
 
     gauth = GoogleAuth()
@@ -18,6 +21,7 @@ def append_row(period,lname,fname,empId,hours):
     gs = gc.open_by_key('1pIMq4bSv0F09i_xztBQjzHGBzvaCER2-sQWAce462KA')
     # select a work sheet from its name
     worksheet1 = gs.worksheet(f'Period {period}')
+    # worksheet1 = gs.worksheet('Period 5')
     row = [lname,fname,empId]
     for hour in hours:
         row.append(hour)  

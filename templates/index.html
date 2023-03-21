@@ -1,76 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Supplemental Pay Period: {{period}}  {{d0}} - {{d13}}</title>
+	<title>Supplemental Pay Period: {{period}}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="static/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
-	<form method="POST">
-		<h1>Supplemental Pay Period: {{period}}  {{d0}} - {{d13}}</h1>
-		<input type="text" id="employee-name" name="employee-fname" value="First">
-		<input type="text" id="employee-name" name="employee-lname" value="Last">
-		<input	type="text" id="employee-id" name="employee-id" value="ID#">
-		<h1 class="yellow">Week 1  {{d0}} - {{d6}}</h2>
-		<table class="container">
-			<thead>
+	<div class="title center">
+	<h1>Supplemental Pay Period: {{period}}</h1>
+	<h2>{{d0}} - {{d13}}</h2>
+	</div>
+	<form method="POST" class="center">
+		<h2>Week 1  {{d0}} - {{d6}}</h2>
+		<table class="table table-striped">
+			<thead class="thead-dark">
 				<tr>
-					<th><h1>Day</h1></th>
-					<th><h1>Start Time</h1></th>
-					<th><h1>Stop Time</h1></th>
-					<th><h1>Total Hours<h1></th>
+					<th>Day</th>
+					<th>Start Time</th>
+					<th>Stop Time</th>
+					<th>Total Hours</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td>{{d0}}-Sunday</td>
-					<td><input type="time" id="sunday-start"></td>
-					<td><input type="time" id="sunday-stop"></td>
+					<td><input type="time" id="sunday-start" name="d0start"></td>
+					<td><input type="time" id="sunday-stop" name="d0stop"></td>
 					<td><input class="no_outline" type="text" id="{{d0}}-sunday-total" name="d0" id="{{d0}}-sunday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d1}}-Monday</td>
-					<td><input type="time" id="monday-start"></td>
-					<td><input type="time" id="monday-stop"></td>
+					<td><input type="time" id="monday-start" name="d1start"></td>
+					<td><input type="time" id="monday-stop" name="d1stop"></td>
 					<td><input class="no_outline" type="text" id="{{d1}}-monday-total" name="d1" id="{{d1}}-monday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d2}}-Tuesday</td>
-					<td><input type="time" id="tuesday-start"></td>
-					<td><input type="time" id="tuesday-stop"></td>
+					<td><input type="time" id="tuesday-start" name="d2start"></td>
+					<td><input type="time" id="tuesday-stop" name="d2stop"></td>
 					<td><input class="no_outline" type="text" id="{{d2}}-tuesday-total" name="d2" id="{{d2}}-tuesday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d3}}-Wednesday</td>
-					<td><input type="time" id="wednesday-start"></td>
-					<td><input type="time" id="wednesday-stop"></td>
+					<td><input type="time" id="wednesday-start" name="d3start"></td>
+					<td><input type="time" id="wednesday-stop" name="d3stop"></td>
 					<td ><input class="no_outline" type="text" id="{{d3}}-wednesday-total" name="d3" id="{{d3}}-wednesday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d4}}-Thursday</td>
-					<td><input type="time" id="thursday-start"></td>
-					<td><input type="time" id="thursday-stop"></td>
+					<td><input type="time" id="thursday-start" name="d4start"></td>
+					<td><input type="time" id="thursday-stop" name="d4stop"></td>
 					<td><input class="no_outline" type="text" id="{{d4}}-thursday-total" name="d4" id="{{d4}}-thursday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d5}}-Friday</td>
-					<td><input type="time" id="friday-start"></td>
-					<td><input type="time" id="friday-stop"></td>
+					<td><input type="time" id="friday-start" name="d5start"></td>
+					<td><input type="time" id="friday-stop" name="d5stop"></td>
 					<td><input class="no_outline" type="text" id="{{d5}}-friday-total" name="d5" id="{{d5}}-friday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d6}}-Saturday</td>
-					<td><input type="time" id="saturday-start"></td>
-					<td><input type="time" id="saturday-stop"></td>
+					<td><input type="time" id="saturday-start" name="d6start"></td>
+					<td><input type="time" id="saturday-stop" name="d6stop"></td>
 					<td><input class="no_outline" type="text" id="{{d6}}-saturday-total" name="d6" id="{{d6}}-saturday-total" readonly></td>
 				</tr>
 			</tbody>
 		</table>
 
-		<h1 class="yellow">Week 2  {{d7}} - {{d13}}</h1>
-		<table class="container">
-			<thead>
+		<h2>Week 2  {{d7}} - {{d13}}</h2>
+		<table class="table table-striped">
+			<thead class="thead-dark">
 				<tr>
 					<th>Day</th>
 					<th>Start Time</th>
@@ -81,52 +83,61 @@
 			<tbody>
 				<tr>
 					<td>{{d7}}-Sunday</td>
-					<td><input type="time" id="sunday-start"></td>
-					<td><input type="time" id="sunday-stop"></td>
+					<td><input type="time" id="sunday-start" name="d7start"></td>
+					<td><input type="time" id="sunday-stop" name="d7stop"></td>
 					<td><input class="no_outline" type="text" id="{{d7}}-sunday-total" name="d7" id="{{d7}}-sunday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d8}}-Monday</td>
-					<td><input type="time" id="monday-start"></td>
-					<td><input type="time" id="monday-stop"></td>
+					<td><input type="time" id="monday-start" name="d8start"></td>
+					<td><input type="time" id="monday-stop" name="d8stop"></td>
 					<td><input class="no_outline" type="text" id="{{d8}}-monday-total" name="d8" id="{{d8}}-monday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d9}}-Tuesday</td>
-					<td><input type="time" id="tuesday-start"></td>
-					<td><input type="time" id="tuesday-stop"></td>
+					<td><input type="time" id="tuesday-start" name="d9start"></td>
+					<td><input type="time" id="tuesday-stop" name="d9stop"></td>
 					<td><input class="no_outline" type="text" id="{{d9}}-tuesday-total" name="d9" id="{{d9}}-tuesday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d10}}-Wednesday</td>
-					<td><input type="time" id="wednesday-start"></td>
-					<td><input type="time" id="wednesday-stop"></td>
+					<td><input type="time" id="wednesday-start" name="d10start"></td>
+					<td><input type="time" id="wednesday-stop" name="d10stop"></td>
 					<td><input class="no_outline" type="text" id="{{d10}}-wednesday-total" name="d10" id="{{d10}}-wednesday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d11}}-Thursday</td>
-					<td><input type="time" id="thursday-start"></td>
-					<td><input type="time" id="thursday-stop"></td>
+					<td><input type="time" id="thursday-start" name="d11start"></td>
+					<td><input type="time" id="thursday-stop" name="d11stop"></td>
 					<td><input class="no_outline" type="text" id="{{d11}}-thursday-total" name="d11" id="{{d11}}-thursday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d12}}-Friday</td>
-					<td><input type="time" id="friday-start"></td>
-					<td><input type="time" id="friday-stop"></td>
+					<td><input type="time" id="friday-start" name="d12start"></td>
+					<td><input type="time" id="friday-stop" name="d12stop"></td>
 					<td><input class="no_outline" type="text" id="{{d12}}-friday-total" name="d12" id="{{d12}}-friday-total" readonly></td>
 				</tr>
 				<tr>
 					<td>{{d13}}-Saturday</td>
-					<td><input type="time" id="saturday-start"></td>
-					<td><input type="time" id="saturday-stop"></td>
+					<td><input type="time" id="saturday-start" name="d13start"></td>
+					<td><input type="time" id="saturday-stop" name="d13stop"></td>
 					<td><input class="no_outline" type="text" id="{{d13}}-saturday-total" name="d13" id="{{d13}}-saturday-total" readonly></td>
 				</tr>
 			</tbody>
 		</table>
-		<p>Total Hours:</p><input class="no_outline" type="text" id="total-hours" name="total-hours" id="total-hours" readonly>
+		<div class="inline">
+		<h2 class="inline dark">Total Hours:</h2><input class="no_outline totalhours inline" type="text" name="total-hours" id="total-hours" readonly>
+		</div>
+		<br><br>
+		<input type="text" id="employee-fname" name="employee-fname" placeholder="First Name">
+		<input type="text" id="employee-lname" name="employee-lname" placeholder="Last Name">
+		<input	type="text" id="employee-id" name="employee-id" placeholder="Employee ID">
 		<button class="button" type="submit" id="submit">Submit</button>
 	</form>
-	
 	<script src="static/timeCalc.js"></script>
+	<script src="static/fieldCheck.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

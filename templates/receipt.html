@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="container">
+    <div class="center">
+    <h1>{{fname}} {{lname}}</h1>
+    <h2>Pay Period: {{period}}</h2>
+    <h2>Submission Successful: {{date}}</h2>
+    <table class="table table-striped border">
+        <thead class="thead-dark">
+            <tr>
+            <th>Date</th>
+            <th>Start</th>
+            <th>Stop</th>
+            <th>Hours</th>
+            </tr>
+        </thead>
+        <tr>
+          <td>{{day0}}</td>
+          <td>{{d0start}}</td>
+          <td>{{d0stop}}</td>
+          <td>{{day0total}}</td>
+        </tr>
+        <tr>
+          <td>{{day1}}</td>
+          <td>{{d1start}}</td>
+          <td>{{d1stop}}</td>
+          <td>{{day1total}}</td>
+        </tr>
+        <tr>
+          <td>{{day2}}</td>
+          <td>{{d2start}}</td>
+          <td>{{d2stop}}</td>
+          <td>{{day2total}}</td>
+        </tr>
+        <tr>
+          <td>{{day3}}</td>
+          <td>{{d3start}}</td>
+          <td>{{d3stop}}</td>
+          <td>{{day3total}}</td>
+        </tr>
+        <tr>
+          <td>{{day4}}</td>
+          <td>{{d4start}}</td>
+          <td>{{d4stop}}</td>
+          <td>{{day4total}}</td>
+        </tr>
+        <tr>
+          <td>{{day5}}</td>
+          <td>{{d5start}}</td>
+          <td>{{d5stop}}</td>
+          <td>{{day5total}}</td>
+        </tr>
+        <tr>
+          <td>{{day6}}</td>
+          <td>{{d6start}}</td>
+          <td>{{d6stop}}</td>
+          <td>{{day6total}}</td>
+        </tr>
+        <tr>
+          <td>{{day7}}</td>
+          <td>{{d7start}}</td>
+          <td>{{d7stop}}</td>
+          <td>{{day7total}}</td>
+        </tr>
+        <tr>
+          <td>{{day8}}</td>
+          <td>{{d8start}}</td>
+          <td>{{d8stop}}</td>
+          <td>{{day8total}}</td>
+        </tr>
+        <tr>
+          <td>{{day9}}</td>
+          <td>{{d9start}}</td>
+          <td>{{d9stop}}</td>
+          <td>{{day9total}}</td>
+        </tr>
+        <tr>
+          <td>{{day10}}</td>
+          <td>{{d10start}}</td>
+          <td>{{d10stop}}</td>
+          <td>{{day10total}}</td>
+          <tr>
+            <td>{{day11}}</td>
+            <td>{{d11start}}</td>
+            <td>{{d11stop}}</td>
+            <td>{{day11total}}</td>
+          </tr>
+          <tr>
+            <td>{{day12}}</td>
+            <td>{{d12start}}</td>
+            <td>{{d12stop}}</td>
+            <td>{{day12total}}</td>
+          </tr>
+          <tr>
+            <td>{{day13}}</td>
+            <td>{{d13start}}</td>
+            <td>{{d13stop}}</td>
+            <td>{{day13total}}</td>
+          </tr>
+        </table>
+    </div>
+    <div class="center">
+    <h2><span class="left">Total Hours: {{total}}</span> <span class="right">Signature:_______________________________</span></h2>
+    <br><br>
+    <h3>Please print, sign and submit to the main office.</h3>
+    
+    <a href="#" onclick="window.print(); return false;">Print or Save for your records</a>
+    <a href="#" id="print">GENERATE PDF!</a>
+    </div>
+    <script src="static/pdfPrint.js"></script>
+    
+  
+</body>
+</html>

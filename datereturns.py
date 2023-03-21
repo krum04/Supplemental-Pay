@@ -3,6 +3,10 @@ import pandas as pd
 from datetime import date, timedelta
 
 def dates_return():
+    """
+    Returns a dictionary of the current pay period and the dates in that pay period
+    """
+    
     payperiod = pd.read_csv('payperiod.csv')
     payperiod['pay_date']= pd.to_datetime(payperiod['pay_date'])
     payperiod['starting']= pd.to_datetime(payperiod['starting'])
